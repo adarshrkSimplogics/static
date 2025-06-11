@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>InsightAI - Your AI-Powered Data Assistant</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: #0b0f19;
+      color: #ffffff;
+      scroll-behavior: smooth;
+    }
+    header {
+      padding: 2rem 4rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #0b0f19;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(10px);
+    }
+    header h1 {
+      font-size: 1.8rem;
+      color: #00e0ff;
+    }
+    nav a {
+      margin-left: 2rem;
+      text-decoration: none;
+      color: #ffffff;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #00e0ff;
+    }
+    .hero {
+      text-align: center;
+      padding: 6rem 2rem 4rem;
+      background: linear-gradient(180deg, #0b0f19 0%, #1a2134 100%);
+      opacity: 0;
+      transform: translateY(50px);
+      animation: fadeInUp 1s ease-out 0.5s forwards;
+    }
+    .hero h2 {
+      font-size: 3rem;
+      font-weight: 700;
+      max-width: 900px;
+      margin: auto;
+    }
+    .hero p {
+      font-size: 1.25rem;
+      margin-top: 1rem;
+      color: #d3d3d3;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .cta {
+      margin-top: 2.5rem;
+    }
+    .cta button {
+      background: #00e0ff;
+      color: #000;
+      font-weight: 600;
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: transform 0.3s ease;
+    }
+    .cta button:hover {
+      transform: scale(1.05);
+    }
+    section {
+      padding: 4rem 2rem;
+      text-align: center;
+      opacity: 0;
+      transform: translateY(50px);
+      animation: fadeInUp 1s ease-out forwards;
+    }
+    section.show {
+      opacity: 1 !important;
+      transform: translateY(0) !important;
+    }
+    section h3 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #00e0ff;
+    }
+    .features, .industries, .benefits {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .card {
+      background: #1f273b;
+      padding: 2rem;
+      border-radius: 12px;
+      text-align: left;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(0, 224, 255, 0.1);
+    }
+    .card h4 {
+      margin-bottom: 0.5rem;
+      font-size: 1.25rem;
+      color: #ffffff;
+    }
+    .card p {
+      color: #b5b5b5;
+      font-size: 0.95rem;
+    }
+    .diagram {
+      max-width: 800px;
+      margin: 2rem auto;
+      background: #1a1f2d;
+      border-radius: 12px;
+      padding: 2rem;
+      font-size: 0.95rem;
+      color: #dcdcdc;
+      text-align: left;
+    }
+    footer {
+      padding: 2rem;
+      background: #0b0f19;
+      text-align: center;
+      font-size: 0.875rem;
+      color: #888;
+    }
+
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>InsightAI</h1>
+    <nav>
+      <a href="#features">Features</a>
+      <a href="#industries">Industries</a>
+      <a href="#benefits">Benefits</a>
+      <a href="#architecture">Architecture</a>
+      <a href="#integration">Integrations</a>
+      <a href="#contact">Try Now</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Your AI Teammate for Smarter, Faster Business Insights</h2>
+    <p>Ask questions in natural language and let InsightAI retrieve, analyze, and explain your business data across any domain.</p>
+    <div class="cta">
+      <button>Request a Demo</button>
+    </div>
+  </section>
+
+  <section id="features">
+    <h3>What Can InsightAI Do?</h3>
+    <div class="features">
+      <div class="card">
+        <h4>Natural Language Querying</h4>
+        <p>No SQL required. Just ask in plain English.</p>
+      </div>
+      <div class="card">
+        <h4>Smart Reasoning</h4>
+        <p>InsightAI understands context, not just keywords.</p>
+      </div>
+      <div class="card">
+        <h4>Live Data Insights</h4>
+        <p>Connect to your database and get real-time answers.</p>
+      </div>
+      <div class="card">
+        <h4>Explainable Results</h4>
+        <p>InsightAI explains answers, not just gives them.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="industries">
+    <h3>Works Across All Industries</h3>
+    <div class="industries">
+      <div class="card">
+        <h4>Construction</h4>
+        <p>Track milestones, delays, budgets, and resources.</p>
+      </div>
+      <div class="card">
+        <h4>Healthcare</h4>
+        <p>Analyze patient metrics, appointments, and performance.</p>
+      </div>
+      <div class="card">
+        <h4>Finance</h4>
+        <p>Audit expenses, track budgets, and manage compliance.</p>
+      </div>
+      <div class="card">
+        <h4>HR & Operations</h4>
+        <p>Monitor employee load, productivity, and performance.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="benefits">
+    <h3>Why Teams Choose InsightAI</h3>
+    <div class="benefits">
+      <div class="card">
+        <h4>Save Time</h4>
+        <p>90% faster access to insights than manual reports.</p>
+      </div>
+      <div class="card">
+        <h4>Empower Teams</h4>
+        <p>Enable everyone to make data-driven decisions.</p>
+      </div>
+      <div class="card">
+        <h4>Reduce Technical Load</h4>
+        <p>Minimize reliance on BI teams and analysts.</p>
+      </div>
+      <div class="card">
+        <h4>Scalable and Secure</h4>
+        <p>Deploy across departments with enterprise-grade security.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="integration">
+    <h3>Easy Integrations</h3>
+    <div class="features">
+      <div class="card">
+        <h4>Slack</h4>
+        <p>Get real-time insights inside your Slack workspace.</p>
+      </div>
+      <div class="card">
+        <h4>WhatsApp</h4>
+        <p>Ask questions on-the-go via WhatsApp chatbot support.</p>
+      </div>
+      <div class="card">
+        <h4>Microsoft Teams</h4>
+        <p>Collaborate with InsightAI through Teams integrations.</p>
+      </div>
+      <div class="card">
+        <h4>Custom Apps</h4>
+        <p>Use our API to integrate into any internal system or portal.</p>
+      </div>
+    </div>
+  </section>
+  
+  <section id="architecture">
+    <h3 style="text-align:center; color:#00e0ff;">How It Works (Agentic RAG Architecture) </h3> <br>
+    <body><div class="mxgraph" style="width: 2000px; margin: 0 auto;" data-mxgraph="{&quot;highlight&quot;:&quot;#0000ff&quot;,&quot;nav&quot;:true,&quot;resize&quot;:true,&quot;dark-mode&quot;:&quot;auto&quot;,&quot;toolbar&quot;:&quot;zoom layers tags lightbox&quot;,&quot;edit&quot;:&quot;_blank&quot;,&quot;xml&quot;:&quot;&lt;mxfile host=\&quot;app.diagrams.net\&quot; agent=\&quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36\&quot; version=\&quot;27.1.4\&quot;&gt;\n  &lt;diagram name=\&quot;Page-1\&quot; id=\&quot;myfj5LN7digEIxAavZ_Z\&quot;&gt;\n    &lt;mxGraphModel dx=\&quot;1042\&quot; dy=\&quot;527\&quot; grid=\&quot;1\&quot; gridSize=\&quot;10\&quot; guides=\&quot;1\&quot; tooltips=\&quot;1\&quot; connect=\&quot;1\&quot; arrows=\&quot;1\&quot; fold=\&quot;1\&quot; page=\&quot;1\&quot; pageScale=\&quot;1\&quot; pageWidth=\&quot;850\&quot; pageHeight=\&quot;1100\&quot; math=\&quot;0\&quot; shadow=\&quot;0\&quot;&gt;\n      &lt;root&gt;\n        &lt;mxCell id=\&quot;0\&quot; /&gt;\n        &lt;mxCell id=\&quot;1\&quot; parent=\&quot;0\&quot; /&gt;\n        &lt;mxCell id=\&quot;uytLHx_WGG-8u-remLm4-44\&quot; value=\&quot;\&quot; style=\&quot;whiteSpace=wrap;html=1;aspect=fixed;\&quot; vertex=\&quot;1\&quot; parent=\&quot;1\&quot;&gt;\n          &lt;mxGeometry x=\&quot;722\&quot; y=\&quot;170\&quot; width=\&quot;80\&quot; height=\&quot;80\&quot; as=\&quot;geometry\&quot; /&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\&quot;uytLHx_WGG-8u-remLm4-1\&quot; value=\&quot;\&quot; style=\&quot;rounded=1;whiteSpace=wrap;html=1;\&quot; vertex=\&quot;1\&quot; parent=\&quot;1\&quot;&gt;\n          &lt;mxGeometry x=\&quot;30\&quot; y=\&quot;50\&quot; width=\&quot;930\&quot; height=\&quot;420\&quot; as=\&quot;geometry\&quot; /&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\&quot;uytLHx_WGG-8u-remLm4-2\&quot; value=\&quot;\&quot; style=\&quot;rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;\&quot; vertex=\&quot;1\&quot; parent=\&quot;1\&quot;&gt;\n          &lt;mxGeometry x=\&quot;138.75\&quot; y=\&quot;100\&quot; width=\&quot;130\&quot; height=\&quot;320\&quot; as=\&quot;geometry\&quot; /&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\&quot;uytLHx_WGG-8u-remLm4-25\&quot; style=\&quot;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0;exitDx=92.5;exitDy=15;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;\&quot; edge=\&quot;1\&quot; parent=\&quot;1\&quot; source=\&quot;uytLHx_WGG-8u-remLm4-3\&quot; target=\&quot;uytLHx_WGG-8u-remLm4-6\&quot;&gt;\n          &lt;mxGeometry relative=\&quot;1\&quot; as=\&quot;geometry\&quot; /&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\&quot;uytLHx_WGG-8u-remLm4-3\&quot; value=\&quot;Query\&quot; style=\&quot;shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;\&quot; vertex=\&quot;1\&quot; parent=\&quot;1\&quot;&gt;\n          &lt;mxGeometry x=\&quot;157.5\&quot; y=\&quot;140\&quot; width=\&quot;92.5\&quot; height=\&quot;60\&quot; as=\&quot;geometry\&quot; /&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\&quot;uytLHx_WGG-8u-remLm4-5\&quot; value=\&quot;Response\&quot; style=\&quot;rounded=1;whiteSpace=wrap;html=1;\&quot; vertex=\&quot;1\&quot; parent=\&quot;1\&quot;&gt;\n          &lt;mxGeometry x=\&quot;157.5\&quot; y=\&quot;360\&quot; width=\&quot;92\&quot; height=\&quot;40\&quot; as=\&quot;geometry\&quot; /&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\&quot;uytLHx_WGG-8u-remLm4-11\&quot; value=\&quot;&amp;lt;b&amp;gt;Orchestrator&amp;lt;br&amp;gt;Agent&amp;lt;/b&amp;gt;\&quot; style=\&quot;text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;\&quot; vertex=\&quot;1\&quot; parent=\&quot;1\&quot;&gt;\n          &lt;mxGeometry x=\&quot;347\&quot; y=\&quot;86\&quot; width=\&quot;60\&quot; height=\&quot;30\&quot; as=\&quot;geometry\&quot; /&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\&quot;uytLHx_WGG-8u-remLm4-12\&quot; value=\&quot;&amp;lt;b&amp;gt;LLM&amp;lt;/b&amp;gt;\&quot; style=\&quot;text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;\&quot; vertex=\&quot;1\&quot; parent=\&quot;1\&quot;&gt;\n          &lt;mxGeometry x=\&quot;349\&quot; y=\&quot;397\&quot; width=\&quot;60\&quot; height=\&quot;30\&quot; as=\&quot;geometry\&quot; /&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\&quot;uytLHx_WGG-8u-remLm4-18\&quot; value=\&quot;&amp;lt;b&amp;gt;Data Source&amp;lt;/b&amp;gt;\&quot; style=\&quot;text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;\&quot; vertex=\&quot;1\&quot; parent=\&quot;1\&quot;&gt;\n          &lt;mxGeometry x=\&quot;770\&quot; y=\&quot;185\&quot; width=\&quot;60\&quot; height=\&quot;30\&quot; as=\&quot;geometry\&quot; /&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\&quot;uytLHx_WGG-8u-remLm4-30\&quot; value=\&quot;\&quot; style=\&quot;group\&quot; vertex=\&quot;1\&quot; connectable=\&quot;0\&quot; parent=\&quot;1\&quot;&gt;\n          &lt;mxGeometry x=\&quot;349\&quot; y=\&quot;125\&quot; width=\&quot;60\&quot; height=\&quot;60\&quot; as=\&quot;geometry\&quot; /&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\&quot;uytLHx_WGG-8u-remLm4-6\&quot; value=\&quot;\&quot; style=\&quot;whiteSpace=wrap;html=1;aspect=fixed;\&quot; vertex=\&quot;1\&quot; parent=\&quot;uytLHx_WGG-8u-remLm4-30\&quot;&gt;\n          &lt;mxGeometry width=\&quot;60\&quot; height=\&quot;60\&quot; as=\&quot;geometry\&quot; /&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\&quot;uytLHx_WGG-8u-remLm4-22\&quot; value=\&quot;\&quot; style=\&quot;sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;fillColor=#01A88D;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.machine_learning;\&quot; vertex=\&quot;1\&quot; parent=\&quot;uytLHx_WGG-8u-remLm4-30\&quot;&gt;\n          &lt;mxGeometry x=\&quot;10\&quot; y=\&quot;10\&quot; width=\&quot;40\&quot; height=\&quot;40\&quot; as=\&quot;geometry\&quot; /&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\&quot;uytLHx_WGG-8u-remLm4-31\&quot; value=\&quot;\&quot; style=\&quot;group;fillColor=#dae8fc;strokeColor=#6c8ebf;\&quot; vertex=\&quot;1\&quot; connectable=\&quot;0\&quot; parent=\&quot;1\&quot;&gt;\n          &lt;mxGeometry x=\&quot;540\&quot; y=\&quot;105\&quot; width=\&quot;130\&quot; height=\&quot;320\&quot; as=\&quot;geometry\&quot; /&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\&quot;uytLHx_WGG-8u-remLm4-10\&quot; value=\&quot;Intent Analyser\&quot; style=\&quot;rounded=1;whiteSpace=wrap;html=1;\&quot; vertex=\&quot;1\&quot; parent=\&quot;uytLHx_WGG-8u-remLm4-31\&quot;&gt;\n          &lt;mxGeometry x=\&quot;19\&quot; y=\&quot;30\&quot; width=\&quot;92\&quot; height=\&quot;40\&quot; as=\&quot;geometry\&quot; /&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\&quot;uytLHx_WGG-8u-remLm4-13\&quot; value=\&quot;Query Executor\&quot; style=\&quot;rounded=1;whiteSpace=wrap;html=1;\&quot; vertex=\&quot;1\&quot; parent=\&quot;uytLHx_WGG-8u-remLm4-31\&quot;&gt;\n          &lt;mxGeometry x=\&quot;19\&quot; y=\&quot;138\&quot; width=\&quot;92\&quot; height=\&quot;40\&quot; as=\&quot;geometry\&quot; /&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\&quot;uytLHx_WGG-8u-remLm4-14\&quot; value=\&quot;Query Planner\&quot; style=\&quot;rounded=1;whiteSpace=wrap;html=1;\&quot; vertex=\&quot;1\&quot; parent=\&quot;uytLHx_WGG-8u-remLm4-31\&quot;&gt;\n          &lt;mxGeometry x=\&quot;19\&quot; y=\&quot;80\&quot; width=\&quot;92\&quot; height=\&quot;40\&quot; as=\&quot;geometry\&quot; /&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\&quot;uytLHx_WGG-8u-remLm4-15\&quot; value=\&quot;Data Analyst &amp;amp;amp; Insight Maker\&quot; style=\&quot;rounded=1;whiteSpace=wrap;html=1;\&quot; vertex=\&quot;1\&quot; parent=\&quot;uytLHx_WGG-8u-remLm4-31\&quot;&gt;\n          &lt;mxGeometry x=\&quot;19\&quot; y=\&quot;199\&quot; width=\&quot;92\&quot; height=\&quot;40\&quot; as=\&quot;geometry\&quot; /&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\&quot;uytLHx_WGG-8u-remLm4-16\&quot; value=\&quot;Response Summarizer\&quot; style=\&quot;rounded=1;whiteSpace=wrap;html=1;\&quot; vertex=\&quot;1\&quot; parent=\&quot;uytLHx_WGG-8u-remLm4-31\&quot;&gt;\n          &lt;mxGeometry x=\&quot;19\&quot; y=\&quot;260\&quot; width=\&quot;92\&quot; height=\&quot;40\&quot; as=\&quot;geometry\&quot; /&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\&quot;uytLHx_WGG-8u-remLm4-32\&quot; value=\&quot;&amp;lt;b&amp;gt;TOOLS&amp;lt;/b&amp;gt;\&quot; style=\&quot;text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;\&quot; vertex=\&quot;1\&quot; parent=\&quot;uytLHx_WGG-8u-remLm4-31\&quot;&gt;\n          &lt;mxGeometry x=\&quot;30\&quot; y=\&quot;1\&quot; width=\&quot;60\&quot; height=\&quot;30\&quot; as=\&quot;geometry\&quot; /&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\&quot;uytLHx_WGG-8u-remLm4-33\&quot; style=\&quot;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;\&quot; edge=\&quot;1\&quot; parent=\&quot;1\&quot; source=\&quot;uytLHx_WGG-8u-remLm4-6\&quot; target=\&quot;uytLHx_WGG-8u-remLm4-8\&quot;&gt;\n          &lt;mxGeometry relative=\&quot;1\&quot; as=\&quot;geometry\&quot; /&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\&quot;uytLHx_WGG-8u-remLm4-34\&quot; value=\&quot;\&quot; style=\&quot;group\&quot; vertex=\&quot;1\&quot; connectable=\&quot;0\&quot; parent=\&quot;1\&quot;&gt;\n          &lt;mxGeometry x=\&quot;349\&quot; y=\&quot;335\&quot; width=\&quot;60\&quot; height=\&quot;60\&quot; as=\&quot;geometry\&quot; /&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\&quot;uytLHx_WGG-8u-remLm4-8\&quot; value=\&quot;\&quot; style=\&quot;whiteSpace=wrap;html=1;aspect=fixed;\&quot; vertex=\&quot;1\&quot; parent=\&quot;uytLHx_WGG-8u-remLm4-34\&quot;&gt;\n          &lt;mxGeometry width=\&quot;60\&quot; height=\&quot;60\&quot; as=\&quot;geometry\&quot; /&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\&quot;uytLHx_WGG-8u-remLm4-23\&quot; value=\&quot;\&quot; style=\&quot;sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;fillColor=#01A88D;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.neuron_ml_sdk;\&quot; vertex=\&quot;1\&quot; parent=\&quot;uytLHx_WGG-8u-remLm4-34\&quot;&gt;\n          &lt;mxGeometry x=\&quot;10\&quot; y=\&quot;9\&quot; width=\&quot;41\&quot; height=\&quot;41\&quot; as=\&quot;geometry\&quot; /&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\&quot;uytLHx_WGG-8u-remLm4-37\&quot; value=\&quot;\&quot; style=\&quot;endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=-0.022;entryY=0.158;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryPerimeter=0;\&quot; edge=\&quot;1\&quot; parent=\&quot;1\&quot; source=\&quot;uytLHx_WGG-8u-remLm4-6\&quot;&gt;\n          &lt;mxGeometry width=\&quot;50\&quot; height=\&quot;50\&quot; relative=\&quot;1\&quot; as=\&quot;geometry\&quot;&gt;\n            &lt;mxPoint x=\&quot;409\&quot; y=\&quot;155\&quot; as=\&quot;sourcePoint\&quot; /&gt;\n            &lt;mxPoint x=\&quot;537.1400000000001\&quot; y=\&quot;155.55999999999995\&quot; as=\&quot;targetPoint\&quot; /&gt;\n            &lt;Array as=\&quot;points\&quot;&gt;\n              &lt;mxPoint x=\&quot;490\&quot; y=\&quot;155\&quot; /&gt;\n            &lt;/Array&gt;\n          &lt;/mxGeometry&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\&quot;uytLHx_WGG-8u-remLm4-48\&quot; value=\&quot;\&quot; style=\&quot;group\&quot; vertex=\&quot;1\&quot; connectable=\&quot;0\&quot; parent=\&quot;1\&quot;&gt;\n          &lt;mxGeometry x=\&quot;760\&quot; y=\&quot;220\&quot; width=\&quot;80\&quot; height=\&quot;80\&quot; as=\&quot;geometry\&quot; /&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\&quot;uytLHx_WGG-8u-remLm4-46\&quot; value=\&quot;\&quot; style=\&quot;whiteSpace=wrap;html=1;aspect=fixed;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;\&quot; vertex=\&quot;1\&quot; parent=\&quot;uytLHx_WGG-8u-remLm4-48\&quot;&gt;\n          &lt;mxGeometry y=\&quot;5\&quot; width=\&quot;80\&quot; height=\&quot;80\&quot; as=\&quot;geometry\&quot; /&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\&quot;uytLHx_WGG-8u-remLm4-17\&quot; value=\&quot;\&quot; style=\&quot;image;aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;spacingTop=3;image=img/lib/active_directory/database_server.svg;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;\&quot; vertex=\&quot;1\&quot; parent=\&quot;uytLHx_WGG-8u-remLm4-48\&quot;&gt;\n          &lt;mxGeometry x=\&quot;18\&quot; y=\&quot;13.170000000000016\&quot; width=\&quot;44\&quot; height=\&quot;53.66\&quot; as=\&quot;geometry\&quot; /&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\&quot;uytLHx_WGG-8u-remLm4-50\&quot; style=\&quot;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;\&quot; edge=\&quot;1\&quot; parent=\&quot;1\&quot; target=\&quot;uytLHx_WGG-8u-remLm4-46\&quot;&gt;\n          &lt;mxGeometry relative=\&quot;1\&quot; as=\&quot;geometry\&quot;&gt;\n            &lt;mxPoint x=\&quot;670\&quot; y=\&quot;265\&quot; as=\&quot;sourcePoint\&quot; /&gt;\n          &lt;/mxGeometry&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\&quot;uytLHx_WGG-8u-remLm4-51\&quot; style=\&quot;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.75;exitDx=0;exitDy=0;entryX=1.006;entryY=0.561;entryDx=0;entryDy=0;entryPerimeter=0;\&quot; edge=\&quot;1\&quot; parent=\&quot;1\&quot; source=\&quot;uytLHx_WGG-8u-remLm4-46\&quot;&gt;\n          &lt;mxGeometry relative=\&quot;1\&quot; as=\&quot;geometry\&quot;&gt;\n            &lt;mxPoint x=\&quot;670.78\&quot; y=\&quot;284.52\&quot; as=\&quot;targetPoint\&quot; /&gt;\n          &lt;/mxGeometry&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\&quot;uytLHx_WGG-8u-remLm4-52\&quot; style=\&quot;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.75;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;\&quot; edge=\&quot;1\&quot; parent=\&quot;1\&quot; source=\&quot;uytLHx_WGG-8u-remLm4-8\&quot; target=\&quot;uytLHx_WGG-8u-remLm4-5\&quot;&gt;\n          &lt;mxGeometry relative=\&quot;1\&quot; as=\&quot;geometry\&quot; /&gt;\n        &lt;/mxCell&gt;\n      &lt;/root&gt;\n    &lt;/mxGraphModel&gt;\n  &lt;/diagram&gt;\n&lt;/mxfile&gt;\n&quot;}"></div>
+    <script type="text/javascript" src="https://viewer.diagrams.net/js/viewer-static.min.js"></script>
+   </section>
+
+  <footer id="contact">
+    <p>&copy; 2025 InsightAI | Built for the future of business intelligence</p>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll("section").forEach(section => {
+      observer.observe(section);
+    });
+  </script>
+</body>
+</html>
