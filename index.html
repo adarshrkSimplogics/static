@@ -171,12 +171,24 @@
         transform: translateY(0);
       }
     }
+
+    .sibi-animate {
+      display: inline-block;
+      transition: width 0.7s cubic-bezier(0.4,0,0.2,1), color 0.7s cubic-bezier(0.4,0,0.2,1);
+      overflow: hidden;
+      white-space: nowrap;
+      vertical-align: bottom;
+    }
+    .sibi-animate span {
+      display: inline-block;
+      transition: none;
+    }
   </style>
 </head>
 <body>
   <header>
     <h1>
-      SiBI
+      <span class="sibi-animate" id="sibiLogo"><span>SiBI</span></span>
       <span class="tagline">Smarter Insights, Simply Delivered.</span>
     </h1>
     <nav>
@@ -305,6 +317,53 @@
     }, { threshold: 0.1 });
     document.querySelectorAll("section").forEach(section => {
       observer.observe(section);
+    });
+
+    function animateSibiSmooth(expanded, original, sibiLogo, span, duration = 1800) {
+      // Animate to expanded
+      // 1. Set width to current (original)
+      sibiLogo.style.width = span.offsetWidth + 'px';
+      // 2. Change text to expanded, measure new width
+      span.textContent = expanded;
+      const expandedWidth = span.offsetWidth;
+      // 3. Set width to expanded (triggers transition)
+      sibiLogo.style.width = expandedWidth + 'px';
+      sibiLogo.style.color = '#ff6600';
+      // 4. After duration, animate back to original
+      setTimeout(() => {
+        // Set width to expanded (current)
+        sibiLogo.style.width = expandedWidth + 'px';
+        // Change text to original, measure width
+        span.textContent = original;
+        const originalWidth = span.offsetWidth;
+        // Set width to original (triggers transition)
+        sibiLogo.style.width = originalWidth + 'px';
+        setTimeout(() => {
+          sibiLogo.style.width = '';
+        }, 700); // match transition duration
+      }, duration);
+    }
+
+    window.addEventListener('DOMContentLoaded', function() {
+      const sibiLogo = document.getElementById('sibiLogo');
+      const original = 'SiBI';
+      const expanded = 'Simplogics Business Intellect';
+      const span = sibiLogo.querySelector('span');
+
+      // Set width to fit original text
+      sibiLogo.style.width = span.offsetWidth + 'px';
+
+      // Animate on load
+      setTimeout(() => {
+        animateSibiSmooth(expanded, original, sibiLogo, span, 2200);
+      }, 900);
+
+      // Animate on hover
+      sibiLogo.addEventListener('mouseenter', () => {
+        if (span.textContent === original) {
+          animateSibiSmooth(expanded, original, sibiLogo, span, 1200);
+        }
+      });
     });
   </script>
 </body>
